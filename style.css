@@ -110,7 +110,7 @@ body {
   z-index: 100;
 }
 
-.nav-dropdown:hover .dropdown-menu {
+.dropdown-menu.active {
   display: block;
 }
 

@@ -37,6 +37,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Support dropdown toggle
+  const dropdown = document.querySelector('.dropdown-menu');
+  const supportBtn = document.querySelector('.support-btn');
+
+  supportBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    dropdown.classList.toggle('active');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-dropdown')) {
+      dropdown.classList.remove('active');
+    }
+  });
+
   // Modal close
   const closeModal = () => {
     modal.classList.remove('active');
